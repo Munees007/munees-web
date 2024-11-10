@@ -1,21 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.dark{
+  background:linear-gradient(45deg,#11001C,#2B1B35);
+  color: white;
+}
+.dark .bg{
+  background-image: url('/bg.png');
+  background-size: cover;
+  filter: drop-shadow(2px 2px 1px lightblue) drop-shadow(1px 1px 20px lightblue);  
+}
+.light{
+  background:linear-gradient(45deg,#C8B6FF,#FFD6FF,#E7C6FF);
+  color: black;
+}
+.light .bg{
+  background-image: url('/dark.png');
+  background-size: cover;
+  filter: drop-shadow(2px 2px 1px lightblue) drop-shadow(1px 1px 20px lightblue);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+.dark .who{
+  background-image: url('/who.png');
+  background-size: cover;
+  filter: drop-shadow(-10px 10px 4px black);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.light .who{
+  background-image: url('/whol.png');
+  background-size: cover;
+  filter: drop-shadow(-10px 10px 4px black);
+}
+
+.light .car{
+  filter: drop-shadow(1px 1px  4px black);
+}
+.dark .car{
+  filter: drop-shadow(1px 1px 4px lightblue);
 }
